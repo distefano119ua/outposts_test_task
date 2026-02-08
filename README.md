@@ -35,3 +35,27 @@ Verify installation:
 docker --version
 docker compose version
 make --version
+```
+## Build Docker images
+
+To build Docker images for all services: `make build`
+
+This command:
+- builds Docker images for logs and nginx services
+- does not start containers
+
+---
+
+## Start services
+
+To start all services in detached mode: `make up`
+
+This command:
+- starts containers using Docker Compose
+- runs services in the background
+
+After startup, the services will be available at:
+- Logs service Swagger UI:  
+  http://localhost:8001/docs
+- Nginx mock service:  
+  http://localhost:8000/logs
