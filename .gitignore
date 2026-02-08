@@ -13,5 +13,9 @@ __pycache__/
 # Docker
 *.log
 
+# Exports (generated files)
+logs/src/exports/*
+!logs/src/exports/.gitkeep
+
 # OS
 .DS_Store
