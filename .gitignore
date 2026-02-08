@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.idea
+
+# uv
+.venv/
+.uv/
+
+# Docker
+*.log
+
+# Exports (generated files)
+logs/src/exports/
+
+# OS
+.DS_Store

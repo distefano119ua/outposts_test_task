@@ -1,0 +1,35 @@
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx-service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./nginx/src:/app/src
+    env_file:
+      - ./nginx/.env
+    networks:
+      - outposts
+
+  logs:
+    build:
+      context: ./logs
+      dockerfile: Dockerfile
+    container_name: logs-service
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./logs/src:/app/src
+      - ./logs/src/exports:/app/exports
+    env_file:
+      - ./logs/.env
+    depends_on:
+      - nginx
+    networks:
+      - outposts
+
+networks:
+  outposts:
+    driver: bridge
