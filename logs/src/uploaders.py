@@ -31,7 +31,7 @@ def add_to_github(file_path: Path) -> None:
     github_path = f"{settings.GITHUB_EXPORTS_PATH}/{file_path.name}"
 
     url = f"https://api.github.com/repos/{owner}/{repo}/contents/{github_path}"
-    print(url, flush=True)
+    #print(url, flush=True)
     content_bytes = file_path.read_bytes()
     content_b64 = base64.b64encode(content_bytes).decode("utf-8")
 
