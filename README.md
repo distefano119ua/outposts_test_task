@@ -36,6 +36,18 @@ docker --version
 docker compose version
 make --version
 ```
+---
+## GitHub configuration
+
+To enable exporting logs to GitHub, you must provide your own GitHub credentials.
+
+Before running the project, update the environment variables with your personal data:
+
+```env
+GITHUB_TOKEN=""
+GITHUB_REPO=""
+```
+---
 ## Build Docker images
 
 To build Docker images for all services: `make build`
