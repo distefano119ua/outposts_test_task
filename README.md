@@ -12,3 +12,26 @@ The system is designed to demonstrate:
 - flexible exporting (CSV / JSON)
 - integration with GitHub via REST API
 - Docker-based development workflow
+---
+
+## Build and run the project using Makefile
+
+The project uses a `Makefile` to simplify building Docker images and running all services.
+All commands must be executed from the **project root directory**.
+
+---
+
+### Prerequisites
+
+Make sure the following tools are installed on your system:
+
+- Docker
+- Docker Compose
+- Make
+
+Verify installation:
+
+```bash
+docker --version
+docker compose version
+make --version
