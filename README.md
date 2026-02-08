@@ -41,7 +41,7 @@ make --version
 
 To enable exporting logs to GitHub, you must provide your own GitHub credentials.
 
-Before running the project, update the environment variables with your personal data:
+Before running the project, update the environment variables with your personal data in logs/.env:
 
 ```env
 GITHUB_TOKEN=""
